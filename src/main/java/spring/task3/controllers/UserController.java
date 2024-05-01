@@ -19,15 +19,14 @@ public class UserController {
         return service.getDataProcessingService().getRepository().getUsers();
     }
 
-    @PostMapping("/body")
-    public String userAddFromBody(@RequestBody User user)
+    @PostMapping("/add/{name}/{age}/{email}")
+    public String userAdd(@PathVariable("name") String name,
+                          @PathVariable("age") int age,
+                          @PathVariable("email") String email)
     {
-        service.getDataProcessingService().getRepository().getUsers().add(user);
+        service.processRegistration(name, age, email);
         return "User added from body!";
     }
-
-
-
 
 
 }

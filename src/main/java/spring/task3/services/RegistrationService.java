@@ -23,6 +23,7 @@ public class RegistrationService {
 
         User user = userService.createUser(name, age, email);
         dataProcessingService.addUserToList(user);
+        notificationService.notifyUser(user);
     }
 
     //Поля UserService, NotificationService

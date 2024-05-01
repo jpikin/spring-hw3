@@ -17,7 +17,6 @@ public class UserService {
         user.setAge(age);
         user.setEmail(email);
 
-        notificationService.notifyUser(user);
         return user;
     }
 }
