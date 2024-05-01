@@ -20,7 +20,7 @@ public class UserController {
     }
 
     @PostMapping("/add/{name}/{age}/{email}")
-    public String userAdd(@PathVariable("name") String name,
+    public String userAddFromParam(@PathVariable("name") String name,
                           @PathVariable("age") int age,
                           @PathVariable("email") String email)
     {
