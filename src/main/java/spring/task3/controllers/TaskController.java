@@ -10,7 +10,6 @@ import spring.task3.services.DataProcessingService;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.OptionalDouble;
 
 @RestController("/tasks")
 public class TaskController {
